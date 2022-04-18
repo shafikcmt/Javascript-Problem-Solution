@@ -1,4 +1,4 @@
-let fees;
+let fees = [];
 
 function getProgramType() {
     var course = document.getElementById("interested_area").value;
@@ -14,10 +14,12 @@ function getProgramType() {
              "B.Sc. Food Technology",
              "B.Sc. Public Health"
             ];
+        fees = [10000, 20000];
     } else if (course === "agriculture") {
         items = ["M.Sc. Agricultural Sciences",
              "B.Sc. (Hons.) Agricultural Sciences"
             ];
+        fees = [10000, 20000];
     } else if (course === "law") {
         items = ["Ph.D.",
              "L.L.M.",
@@ -25,7 +27,6 @@ function getProgramType() {
              "B.A. LL.B. (Hons.)",
              "BBA.LL.B. (Hons.)"
             ];
-        fees = [10000, 20000, 30000, 50000, 70000];
 
     } else if (course === "engineering") {
         items = ["Ph.D. ME | CSE | Civil | ECE",
@@ -237,16 +238,15 @@ function getscholarship() {
     }
 
     document.getElementById("pickscholar").innerHTML = str;
-    console.log(str);
+
 }
 document.getElementById("btnscho").addEventListener("click", getscholarship);
 //*********************************************************************
 function getscholarper() {
     var scholarship_per = document.getElementById("pickscholar").value;
     var items;
-    var itemsports;
     if (scholarship_per === "GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE") {
-        items = items = ["Scholarship",
+        items = ["Scholarship",
                           ""
                           ];
     } else if (scholarship_per === "MERIT PERCENTAGE IN QUALIFYING EXAMINATION") {
@@ -295,6 +295,16 @@ function getscholarper() {
 document.getElementById("btnscho-per").addEventListener("click", getscholarper);
 
 
+const aoiBtn = document.querySelector(".aoi_btn");
+aoiBtn.addEventListener("click", (e) => {
+   const progSelector = document.querySelector("#pickone");
+   const progOptions = document.querySelectorAll("#pickone option");
+    progOptions.forEach((option, i) => {
+        option.setAttribute("value", fees[i]);
+    })
+
+});
+
 
 let percentage = [10, 20, 30, 40, 10, 25];
 const schoBtn = document.querySelector("#btnscho");
@@ -303,8 +313,27 @@ schoBtn.addEventListener("click", (e) => {
     const scholarTemp2 = document.querySelectorAll("#pickscholar option");
     scholarTemp2.forEach((ele, i) => {
      ele.setAttribute("value", percentage[i]);
-        console.log(ele);
+        console.log(ele.textContent, ele.value);
     });
+    
 });
 
+const finalBtn = document.querySelector("#btnscho-per");
+finalBtn.addEventListener("click", (e) => {
+    const scholarshipTemp = document.querySelector("#pickscholar");
+    const ttlFee = document.querySelector("#totalFee");
+    const negateBox = document.querySelector("#negateFee");
+
+    
+
+   const progSelector = document.querySelector("#pickone");
+    console.log(progSelector.value, " % ", scholarshipTemp.value, " = ")
+    console.log(progSelector.value * (scholarshipTemp.value / 100));
+    let negate = progSelector.value * (scholarshipTemp.value / 100);
+    
+    ttlFee.value = progSelector.value;
+    negateBox.value = negate;
+    document.querySelector("#finalFee").value=progSelector.value - negate;
+    
+})
 
