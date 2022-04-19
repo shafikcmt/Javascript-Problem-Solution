@@ -1,35 +1,38 @@
-let fees = [];
+//let fees = [];
 
 function getProgramType() {
     var course = document.getElementById("interested_area").value;
     var items;
 
     if (course === "pharmacy") {
-        items = ["D.Pharmacy", "B.Pharmacy"];
+        items = ["Select", "D.Pharmacy", "B.Pharmacy"];
+        fees = [" ",130000, 300000];
     } else if (course === "allied-health-sciences") {
-        items = ["M.Sc. Nutrition & Dietetics",
+        items = ["select", "M.Sc. Nutrition & Dietetics",
              "B.Tech. Medical Lab Technology",
              "B.Sc. Yogic Science",
              "B.Sc. Nutrition & Dietetics",
              "B.Sc. Food Technology",
              "B.Sc. Public Health"
             ];
-        fees = [10000, 20000];
+        fees = [null,120000, 300000, 270000, 180000, 180000, 180000];
     } else if (course === "agriculture") {
-        items = ["M.Sc. Agricultural Sciences",
+        items = ["select","M.Sc. Agricultural Sciences",
              "B.Sc. (Hons.) Agricultural Sciences"
             ];
-        fees = [10000, 20000];
+        fees = [null,150000, 380000];
+
     } else if (course === "law") {
-        items = ["Ph.D.",
+        items = ["select","Ph.D.",
              "L.L.M.",
              "L.L.B.",
              "B.A. LL.B. (Hons.)",
              "BBA.LL.B. (Hons.)"
             ];
-
+        
+        fees = [null,225000, 110000, 100000, 475000, 475000];
     } else if (course === "engineering") {
-        items = ["Ph.D. ME | CSE | Civil | ECE",
+        items = ["select", "Ph.D. ME | CSE | Civil | ECE",
              "M.Tech. ME | CSE | CE | ECE",
              "B.Tech. ME | CE | ECE",
              "Diploma ME | CSE | CE",
@@ -52,8 +55,9 @@ function getProgramType() {
              "Industry Integrated Program In Block Chain Technology",
              "B.Tech. CSE"
             ];
+        fees = [null,225000, 120000, 300000, 135000, 360000, 360000,360000,360000,360000,360000,360000,360000,360000,450000,440000,440000,440000,440000,440000,440000,440000,440000,360000];
     } else if (course === "computer-application") {
-        items = ["MCA",
+        items = ["select", "MCA",
              "BCA",
              "BCA Hons. Industry Integrated Program Artificial Int. & Machine Learning",
              "BCA Hons. Industry Integrated Program Data Science & Analytics",
@@ -61,8 +65,9 @@ function getProgramType() {
              "BCA Hons. Industry Integrated Program Cloud Computing",
              "BCA Hons. Industry Integrated Program Full Stack Web Development in tie up with CODEQUOTIENT"
             ];
+        fees = [null,120000,150000,195000,195000,195000,195000,195000,195000];
     } else if (course === "sciences") {
-        items = ["M.Sc. In Botany",
+        items = ["select", "M.Sc. In Botany",
              "M.Sc. In Zoology",
              "M.Sc. In Chemistry",
              "M.Sc. In Physics",
@@ -83,8 +88,9 @@ function getProgramType() {
              "B.Sc. (Hons.) In Statistics & Analysis",
              "B.Sc. (Hons.) In Biotechnology"
             ];
+        fees =[null,120000,120000,120000,120000,120000,120000,120000,120000,120000,180000,180000,180000,180000,180000,180000,180000,180000,180000,180000,180000];
     } else if (course === "commerce") {
-        items = ["Ph.D.",
+        items = ["select", "Ph.D.",
             "M.Com.",
             "B.Com. (Hons.) In Financial Market",
             "B.Com. (Hons.) In E Commerce",
@@ -96,8 +102,9 @@ function getProgramType() {
             "B.Com."
 
             ];
+         fees =[null,180000,120000,225000,225000,225000,225000,225000,225000,225000,180000];
     } else if (course === "arts-humanities") {
-        items = ["M.A.",
+        items = ["select", "M.A.",
             "M.A.  Economics",
             "M.A.  Political Sci.",
             "M.A.  English",
@@ -114,8 +121,9 @@ function getProgramType() {
             "B.A. (Hons.) In Fine Arts"
 
             ];
+         fees =[null,120000,120000,120000,120000,120000,120000,120000,120000,180000,180000,180000,180000,180000,180000,180000];
     } else if (course === "media-studies") {
-        items = [
+        items = ["select",
            "M.A. Journalism & Mass Communication",
            "M.Sc. Animation, & Multimedia Technology",
            "B.Sc. Animation, VFX & Gaming",
@@ -123,8 +131,9 @@ function getProgramType() {
            "B.A. Film & Television Studies"
 
         ];
+        fees =[null,150000,150000,225000,180000,180000];
     } else if (course === "fashion-design") {
-        items = [
+        items = ["select",
            "B.Design.",
            "Fashion Design",
            "Product Design",
@@ -133,14 +142,14 @@ function getProgramType() {
            "B.Sc. Interior Design"
 
         ];
+        fees =[null,440000,440000,440000,440000,440000,330000];
     } else if (course === "management") {
-        items = [
+        items = ["select",
            "Ph.D.",
            "PG Diploma",
            "Maritime Business Management",
            "Entreprenuership",
            "Innovation & Design Thinking",
-           "MBA",
            "MBA In Finance",
            "MBA In Marketing",
            "MBA In Hospital Mgmt.",
@@ -179,8 +188,9 @@ function getProgramType() {
            "BBA"
 
         ];
+         fees =[null,225000,75000,75000,75000,75000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,190000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,225000,180000];
     } else if (course === "hotel-management") {
-        items = [
+        items = ["select",
            "Bachelor of Hotel Mgmt. & Catering Tech.",
            "B.Sc. Hotel Management",
            "Hotel Management",
@@ -190,17 +200,19 @@ function getProgramType() {
            "Diploma in Food Production",
            "Diploma in Food & Beverage Services"
         ];
+         fees =[null,352000,225000,225000,225000,225000,225000,67500,67500];
     } else if (course === "special-education") {
-        items = [
+        items = ["select",
            "B.Ed. Special Education",
            "Hearing Inpairment",
-           "Learning Disability",
-           "M.Ed.",
-           "M.A. Education",
-           "B.Ed."
+          "Learning Disability"
+//           "M.Ed.",
+//           "M.A. Education",
+//           "B.Ed."
         ];
+        fees =[null,120000,120000,120000];
     } else if (course === "short-term-certification-diploma") {
-        items = [
+        items = ["select",
            "Drone Technology",
            "Block Chain",
            "Data Science",
@@ -209,13 +221,14 @@ function getProgramType() {
            "Web Design",
            "Digital Marketing"
         ];
+         fees =[null,352000,225000,225000,225000,225000,225000,67500,67500];
     }
 
 
     var str = "";
-    for (var item of items) {
-        str += "<option>" + item + "</option>";
-    }
+    items.forEach((item, i) => {
+        str += `<option value=${fees[i]}> ${item} </option>`;
+    });
     document.getElementById("pickone").innerHTML = str;
 }
 document.getElementById("btn").addEventListener("click", getProgramType);
@@ -224,7 +237,7 @@ document.getElementById("btn").addEventListener("click", getProgramType);
 function getscholarship() {
     var scholarship = document.getElementById("pickscholar").value;
     var items;
-    items = ["GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE",
+    items = ["select", "GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE",
              "MERIT PERCENTAGE IN QUALIFYING EXAMINATION",
              "NATIONAL LEVEL TESTS / ENTRANCE",
              "SOCIAL RESPONSIBILITY",
@@ -236,7 +249,7 @@ function getscholarship() {
     for (var item of items) {
         str += "<option>" + item + "</option>";
     }
-
+    
     document.getElementById("pickscholar").innerHTML = str;
 
 }
@@ -246,28 +259,30 @@ function getscholarper() {
     var scholarship_per = document.getElementById("pickscholar").value;
     var items;
     if (scholarship_per === "GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE") {
-        items = ["Scholarship",
-                          ""
+        items = ["Select", "Scholarship"
+
                           ];
+
     } else if (scholarship_per === "MERIT PERCENTAGE IN QUALIFYING EXAMINATION") {
-        items = ["Scholarship Offered",
-                 ""
+        items = ["select", "Scholarship Offered"
+
                 ];
     } else if (scholarship_per === "PERFORMANCE IN SPORTS") {
-        items = ["International Players",
+        items = ["select", "International Players",
                  "National Medal winners",
                  "National Participation"
                 ];
     } else if (scholarship_per === "COVID-19") {
-        items = ["Loss of both the parents due to COVID",
+        items = ["select", "Loss of both the parents due to COVID",
                  "Loss of father due to COVID",
                  "Loss of family member",
                  "Frontline corona warriors i.e. Medical staff, Health workers, Doctors,Paramedics, Police, Civic workers, working withNational Disaster Management Auth. (NDMA) etc"
                 ];
     } else if (scholarship_per === "SOCIAL RESPONSIBILITY") {
-        items = ["Freedom Fighters",
+        items = ["select", "Freedom Fighters",
                  "Defense",
                  "Disability",
+                 "Employee",
                  "Employee's Sibling/Spouse",
                  "Existing Student / GGI Alumni",
                  "Alumni / Existing Student's Sibling/Spouse",
@@ -276,7 +291,7 @@ function getscholarper() {
                  "Orphan Child"
                 ];
     } else if (scholarship_per === "NATIONAL LEVEL TESTS / ENTRANCE") {
-        items = ["JEE (Main) - Joint Entrance Examination",
+        items = ["select", "JEE (Main) - Joint Entrance Examination",
                  "National Eligibility cumNEET - Entrance Test",
                  "CAT/ XAT/ MAT/ CMAT/ NMAT",
                  "NIFT Entrance Exam NID DAT UCEED",
@@ -284,56 +299,189 @@ function getscholarper() {
                 ];
     }
 
-
     var str = "";
-
-    for (var item of items) {
-        str += "<option>" + item + "</option>";
-    }
-    document.getElementById("pickscholarpercentage").innerHTML = str;
+    items.forEach((item, i) => {
+        str += `<option value="${item}">${item}</option>`;
+    });
+    document.getElementById("typeOfScholarship").innerHTML = str;
 }
+
 document.getElementById("btnscho-per").addEventListener("click", getscholarper);
 
+const typeOfScholarshipSelector = document.querySelector("#typeOfScholarship");
+typeOfScholarshipSelector.addEventListener("change", (e) => {
+    let items = [];
+    let off = [];
+    let str = '';
+    //    GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE START
+    if (typeOfScholarshipSelector.value === "Scholarship") {
+        items = ["select", "≥95", "≥90%", "≥80%", " ≥70%", "≥60%"];
+        off = [null, 100, 50, 40, 30, 10];
+    }
+    //    GUTS (GEETA UNIVERSITY TEST OF SCHOLARSHIP) SCORE START
+    //    **********************************************************************
+    //SCHOLARSHIP ON BASIS OF MERIT / PERCENTAGE IN QUALIFYING EXAMINATION START
+    else if (typeOfScholarshipSelector.value === "Scholarship Offered") {
+        items = ["select", "≥95", "90-94.99 %", "80-89.99 %", " 70-79.99 % ", "60- 69.99 %"];
+        off = [null, 100, 50, 40, 30, 10];
+    }
+    //SCHOLARSHIP ON BASIS OF MERIT / PERCENTAGE IN QUALIFYING EXAMINATION END
+    //    **********************************************************************
 
-const aoiBtn = document.querySelector(".aoi_btn");
-aoiBtn.addEventListener("click", (e) => {
-   const progSelector = document.querySelector("#pickone");
-   const progOptions = document.querySelectorAll("#pickone option");
-    progOptions.forEach((option, i) => {
-        option.setAttribute("value", fees[i]);
-    })
+    //    NATIONAL LEVEL TESTS / ENTRANCE START
+    else if (typeOfScholarshipSelector.value === "JEE (Main) - Joint Entrance Examination") {
+        items = ["select", "50%", "40%", "30%"];
+        off = [null, 50, 40, 30];
+
+
+    } else if (typeOfScholarshipSelector.value === "National Eligibility cumNEET - Entrance Test") {
+        items = ["select", "50%", "40%", "30%"];
+        off = [null, 50, 40, 30];
+
+
+    } else if (typeOfScholarshipSelector.value === "CAT/ XAT/ MAT/ CMAT/ NMAT") {
+        items = ["select", "50%", "40%", "30%"];
+        off = [null, 50, 40, 30];
+
+
+    } else if (typeOfScholarshipSelector.value === "NIFT Entrance Exam NID DAT UCEED") {
+        items = ["select", "50%", "40%", "30%"];
+        off = [null, 50, 40, 30];
+
+
+    } else if (typeOfScholarshipSelector.value === "Existing Student / GGI Alumni") {
+        items = ["select", "50%", "40%", "30%"];
+        off = [null, 50, 40, 30];
+
+
+    }
+    //    NATIONAL LEVEL TESTS / ENTRANCE END
+
+    // *****************************************************************************   
+
+    //    SCHOLARSHIP ON THE BASIS OF PERFORMANCE IN SPORTS START
+    else if (typeOfScholarshipSelector.value === "International Players" || typeOfScholarshipSelector.value === "National Medal winners" || typeOfScholarshipSelector.value === "National Participation") {
+
+        let fees = document.querySelector("#pickone").value;
+        let offer = 0;
+        if (typeOfScholarshipSelector.value === "International Players") {
+            offer = 100;
+        } else if (typeOfScholarshipSelector.value === "National Medal winners") {
+            offer = 50;
+        } else if (typeOfScholarshipSelector.value === "National Participation") {
+            offer = 30;
+        }
+
+        document.querySelector("#totalFee").value = fees;
+        document.querySelector("#offer").value = offer + "%";
+        let minusFee = (fees * (offer / 100));
+        document.querySelector("#finalFee").value = fees - minusFee;
+
+    }
+    //    SCHOLARSHIP ON THE BASIS OF PERFORMANCE IN SPORTS END
+
+    // *****************************************************************************   
+
+    //    SOCIAL RESPONSIBILITY SCHOLARSHIP START
+    else if (
+        typeOfScholarshipSelector.value === "select" || 
+        typeOfScholarshipSelector.value === "Freedom Fighters" || 
+        typeOfScholarshipSelector.value === "Defense" ||
+        typeOfScholarshipSelector.value === "Disability" ||
+        typeOfScholarshipSelector.value === "Employee" ||
+        typeOfScholarshipSelector.value === "Employee's Sibling/Spouse" ||
+        typeOfScholarshipSelector.value === "Existing Student / GGI Alumni" ||
+        typeOfScholarshipSelector.value === "Alumni / Existing Student's Sibling/Spouse" ||
+        typeOfScholarshipSelector.value === "Economically Weaker Sections" ||
+        typeOfScholarshipSelector.value === "Child of Single Mother(SGC)" ||
+        typeOfScholarshipSelector.value === "Orphan Child") {
+
+        let fees = document.querySelector("#pickone").value;
+        let offer = 0;
+        if (typeOfScholarshipSelector.value === "Freedom Fighters") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Defense") {
+            offer = 30;
+        }
+        else if (typeOfScholarshipSelector.value === "Disability") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Employee") {
+            offer = 50;
+        } else if (typeOfScholarshipSelector.value === "Employee's Sibling/Spouse") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Existing Student / GGI Alumni") {
+            offer = 50;
+        } else if (typeOfScholarshipSelector.value === "Alumni / Existing Student's Sibling/Spouse") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Economically Weaker Sections") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Child of Single Mother(SGC)") {
+            offer = 30;
+        } else if (typeOfScholarshipSelector.value === "Orphan Child") {
+            offer = 50;
+        } else if (typeOfScholarshipSelector.value === "select") {
+            offer = 0;
+        } 
+
+        document.querySelector("#totalFee").value = fees;
+        document.querySelector("#offer").value = offer + "%";
+        let minusFee = (fees * (offer / 100));
+        document.querySelector("#finalFee").value = fees - minusFee;
+
+    }
+    //  SOCIAL RESPONSIBILITY SCHOLARSHIP END
+
+
+    // *****************************************************************************   
+
+    //    COVID 19 SCHOLARSHIPS START
+    else if (
+        typeOfScholarshipSelector.value === "Loss of both the parents due to COVID" || typeOfScholarshipSelector.value === "Loss of father due to COVID" ||
+        typeOfScholarshipSelector.value === "Loss of family member" ||
+        typeOfScholarshipSelector.value === "Frontline corona warriors i.e. Medical staff, Health workers, Doctors,Paramedics, Police, Civic workers, working withNational Disaster Management Auth. (NDMA) etc") {
+
+        let fees = document.querySelector("#pickone").value;
+        let offer = 0;
+        if (typeOfScholarshipSelector.value === "Loss of both the parents due to COVID") {
+            offer = 60;
+        } else if (typeOfScholarshipSelector.value === "Loss of father due to COVID") {
+            offer = 40;
+        } else if (typeOfScholarshipSelector.value === "Loss of family member") {
+            offer = 20;
+        }
+        else if (typeOfScholarshipSelector.value === "Frontline corona warriors i.e. Medical staff, Health workers, Doctors,Paramedics, Police, Civic workers, working withNational Disaster Management Auth. (NDMA) etc") {
+        offer = 20;
+    }
+    document.querySelector("#totalFee").value = fees;
+    document.querySelector("#offer").value = offer + "%";
+    let minusFee = (fees * (offer / 100));
+    document.querySelector("#finalFee").value = fees - minusFee;
+    } 
+//   COVID 19 SCHOLARSHIPS END
+
+const scholarshipPercentageSelctor = document.querySelector("#pickscholarpercentage");
+
+items.forEach((item, i) => {
+    str += `<option value="${off[i]}"> ${item} </option>`;
+});
+
+scholarshipPercentageSelctor.innerHTML = str;
 
 });
 
 
-let percentage = [10, 20, 30, 40, 10, 25];
-const schoBtn = document.querySelector("#btnscho");
 
-schoBtn.addEventListener("click", (e) => {
-    const scholarTemp2 = document.querySelectorAll("#pickscholar option");
-    scholarTemp2.forEach((ele, i) => {
-     ele.setAttribute("value", percentage[i]);
-        console.log(ele.textContent, ele.value);
-    });
-    
+//  don't touch it
+const scholarshipPercentageSelctor = document.querySelector("#pickscholarpercentage");
+scholarshipPercentageSelctor.addEventListener("change", (e) => {
+
+    let off = scholarshipPercentageSelctor.value;
+    console.log(off);
+    let fees = document.querySelector("#pickone").value;
+    console.log(fees)
+    document.querySelector("#totalFee").value = fees;
+    document.querySelector("#offer").value = scholarshipPercentageSelctor.value + "%";
+    let minusFee = (fees * (off / 100));
+    document.querySelector("#finalFee").value = fees - minusFee;
+
 });
-
-const finalBtn = document.querySelector("#btnscho-per");
-finalBtn.addEventListener("click", (e) => {
-    const scholarshipTemp = document.querySelector("#pickscholar");
-    const ttlFee = document.querySelector("#totalFee");
-    const negateBox = document.querySelector("#negateFee");
-
-    
-
-   const progSelector = document.querySelector("#pickone");
-    console.log(progSelector.value, " % ", scholarshipTemp.value, " = ")
-    console.log(progSelector.value * (scholarshipTemp.value / 100));
-    let negate = progSelector.value * (scholarshipTemp.value / 100);
-    
-    ttlFee.value = progSelector.value;
-    negateBox.value = negate;
-    document.querySelector("#finalFee").value=progSelector.value - negate;
-    
-})
-

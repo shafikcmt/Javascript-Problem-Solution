@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scholership-area d-flex p-3 bg-secondary text-white justify-content-around flex-column">
+            <div class="areainterest">
+                <h3>Select Area of interested</h3>
+                
+                   
+<!--                    <input class="form-control" type="text" list="interested" name="interested-area" id="interested_area">-->
+<!--                    <select id="interested" class="form-control" id="interested_area">-->
+                    <select class="form-control" id="interested_area">
+                        <option value="pharmacy" class="list-item">Pharmacy</option>
+                        <option value="allied-health-sciences">Allied Health Sciences</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="law">Law</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="computer-application">Computer Application</option>
+                        <option value="sciences">Sciences</option>
+                        <option value="commerce">Commerce</option>
+                        <option value="arts-humanities">Arts & Humanities</option>
+                        <option value="media-studies">Media Studies</option>
+                        <option value="fashion-design">Fashion & Design</option>
+                        <option value="management">Management</option>
+                        <option value="hotel-management">Hotel Management</option>
+                        <option value="special-education">Special Education</option>
+                        <option value="short-term-certification-diploma">Short Term Certification & Diploma</option> 
+                    </select>
+                    <br>
+                    <button id="btn"  class="btn btn-light aoi_btn">Next</button>
+              
+                
+            </div>
+            <div class="area-of-program">
+               <h3>Select Program</h3>
+                <select class="form-control" id="pickone">
+                   
+                </select>
+                <br>
+                <button class="btn btn-light" id="btnscho">Next</button>
+            </div>
+            <div class="area-of-scholership">
+               <h5>SCHOLARSHIPS AT GEETA UNIVERSITY (GU)</h5>
+                <select class="form-control" id="pickscholar">
+                   
+                </select>
+                 <br>
+                <button class="btn btn-light" id="btnscho-per">Next</button>
+            </div>
+            <div class="area-of-scholership-percentage">
+                <h5>Scholarship Perchantage</h5>
+                 <select class="form-control" id="pickscholarpercentage">
+                    
+                 </select>
+             </div>
+            <div class="calculation_area">
+            <br>
+            <br>
+            <br>
+            <table class="table table-striped" width="40%" align="right">
+                <tr>
+                   <td>Total Fees:</td>
+                   <td><input type="text" id="totalFee" disabled /> </td>
+                </tr>
+                <tr>
+                   <td>Scholarship:</td>
+                   <td><input type="text" id="negateFee" disabled /> </td>
+                </tr>
+                 <tr>
+                   <td>You've to pay:</td>
+                   <td><input type="text" id="finalFee" disabled /> </td>
+                </tr>
+            </table>
+     
+       
+       
+</div>
+        </div>
+
+     
+   
+    
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
